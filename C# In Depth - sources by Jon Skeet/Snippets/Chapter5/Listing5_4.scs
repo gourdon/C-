@@ -1,0 +1,19 @@
+delegate void SampleDelegate(string x);
+
+public void CandidateAction(string x)
+{
+    Console.WriteLine("Snippet.CandidateAction");
+}
+
+public class Derived : Snippet
+{
+    public void CandidateAction(object o)
+    {
+        Console.WriteLine("Derived.CandidateAction");
+    }
+}
+
+...
+Derived x = new Derived();
+SampleDelegate factory = new SampleDelegate(x.CandidateAction);
+factory("test");

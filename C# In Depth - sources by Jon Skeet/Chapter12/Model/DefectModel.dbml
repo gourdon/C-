@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SkeetySoftDefects" Class="DefectModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\SkeetySoftDefects.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="SkeetySoftDefectsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Defect" Member="Defects">
+    <Type Name="Defect">
+      <Column Name="DefectID" Member="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Summary" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Severity" Type="Severity" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="Status" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedToUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Project_Defect" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+      <Association Name="User_Defect" Member="AssignedTo" ThisKey="AssignedToUserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="User_Defect1" Member="CreatedBy" ThisKey="CreatedByUserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Project_Defect" Member="Defects" ThisKey="ProjectID" OtherKey="ProjectID" Type="Defect" />
+      <Association Name="Project_NotificationSubscription" Member="NotificationSubscriptions" ThisKey="ProjectID" OtherKey="ProjectID" Type="NotificationSubscription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefectUser" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserType" Type="UserType" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="User_Defect" Member="AssignedDefects" ThisKey="UserID" OtherKey="AssignedToUserID" Type="Defect" />
+      <Association Name="User_Defect1" Member="CreatedDefects" ThisKey="UserID" OtherKey="CreatedByUserID" Type="Defect" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NotificationSubscription" Member="NotificationSubscriptions">
+    <Type Name="NotificationSubscription">
+      <Column Name="NotificationSubscriptionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Association Name="Project_NotificationSubscription" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

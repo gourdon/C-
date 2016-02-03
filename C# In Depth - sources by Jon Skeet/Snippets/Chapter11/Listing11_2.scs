@@ -1,0 +1,6 @@
+var query = SampleData.AllUsers.Select(user => user);
+
+foreach (var user in query)
+{
+    Console.WriteLine(user);
+}

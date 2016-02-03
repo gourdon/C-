@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Linq.ParallelQuery&lt;TSource&gt;" Collapsed="true">
+    <Position X="0.75" Y="2" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="1.731" />
+  </Class>
+  <Class Name="System.Linq.ParallelQuery" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="1.231" />
+  </Class>
+  <Class Name="System.Linq.OrderedParallelQuery&lt;TSource&gt;" Collapsed="true">
+    <Position X="0.75" Y="3" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

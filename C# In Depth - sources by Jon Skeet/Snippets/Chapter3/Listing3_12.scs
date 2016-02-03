@@ -1,0 +1,11 @@
+public static void PrintTypeParameter<T>()
+{
+    Console.WriteLine (typeof(T));
+}
+
+...
+Type type = typeof(Snippet);
+MethodInfo definition = type.GetMethod("PrintTypeParameter");
+MethodInfo constructed;
+constructed = definition.MakeGenericMethod(typeof(string));
+constructed.Invoke(null, null);

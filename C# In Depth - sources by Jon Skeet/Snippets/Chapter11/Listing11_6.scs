@@ -1,0 +1,8 @@
+ArrayList list = new ArrayList { "First", "Second", "Third"};
+var strings = from string entry in list
+              select entry.Substring(0, 3);
+
+foreach (string start in strings)
+{
+    Console.WriteLine(start);
+}

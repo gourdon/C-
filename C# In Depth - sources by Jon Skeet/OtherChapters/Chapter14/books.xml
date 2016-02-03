@@ -1,0 +1,16 @@
+﻿<books>
+  <book name="Mortal Engines">
+    <author name="Philip Reeve" />
+  </book>
+  <book name="The Talisman">
+    <author name="Stephen King" />
+    <author name="Peter Straub" />
+  </book>
+  <book name="Rose">
+    <author name="Holly Webb" />
+    <excerpt>
+      Rose was remembering the illustrations from
+      Morally Instructive Tales for the Nursery.
+    </excerpt>
+  </book>
+</books>

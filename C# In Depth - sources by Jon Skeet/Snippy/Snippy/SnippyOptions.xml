@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SnippetOptionsCollection>
+  <SnippetOptions name=".NET 2.0">
+    <Assembly name="System" />
+    <Assembly name="System.Windows.Forms" />
+
+    <Namespace name="System" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.Windows.Forms" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+  </SnippetOptions>
+
+  <SnippetOptions name=".NET 3.5">
+    <Assembly name="System" />
+    <Assembly name="System.Windows.Forms" />
+    <Assembly name="System.Core" />
+
+    <Namespace name="System" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Windows.Forms" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+    <Namespace name="System.Linq" />
+    <Namespace name="System.Linq.Expressions" />
+
+    <CompilerOption name="CompilerVersion" value="v3.5" />    
+  </SnippetOptions>
+
+  <SnippetOptions name="Chapter 8">
+    <Assembly name="System" />
+    <Assembly name="System.Windows.Forms" />
+    <Assembly name="System.Core" />
+    <Assembly name="Chapter08.exe" />
+
+    <Namespace name="System" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Windows.Forms" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+    <Namespace name="System.Linq" />
+    <Namespace name="System.Linq.Expressions" />
+    <Namespace name="Chapter08" />
+
+    <CompilerOption name="CompilerVersion" value="v3.5" />
+  </SnippetOptions>
+
+  <SnippetOptions name="Chapter 11">
+    <Assembly name="System" />
+    <Assembly name="System.Windows.Forms" />
+    <Assembly name="System.Core" />
+    <Assembly name="Chapter11.exe" />
+
+    <Namespace name="System" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Windows.Forms" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+    <Namespace name="System.Linq" />
+    <Namespace name="System.Linq.Expressions" />
+    <Namespace name="Chapter11.Model" />
+    <Namespace name="Chapter11.Queries" />
+
+    <CompilerOption name="CompilerVersion" value="v3.5" />
+  </SnippetOptions>
+
+  <SnippetOptions name="Chapter 13">
+    <Assembly name="System" />
+    <Assembly name="System.Core" />
+    <Assembly name="WindowsBase" />
+    <Assembly name="Chapter13.exe" />
+
+    <Namespace name="System" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+    <Namespace name="System.Linq" />
+    <Namespace name="System.Linq.Expressions" />
+    <Namespace name="System.Windows" />
+    <Namespace name="Chapter13" />
+
+    <CompilerOption name="CompilerVersion" value="v4.0" />
+  </SnippetOptions>
+
+  <SnippetOptions name=".NET 4">
+    <Assembly name="System" />
+    <Assembly name="System.Core" />
+    <Assembly name="WindowsBase" />
+    <Assembly name="Microsoft.CSharp" />
+
+    <Namespace name="System" />
+    <Namespace name="System.Text" />
+    <Namespace name="System.Text.RegularExpressions" />
+    <Namespace name="System.IO" />
+    <Namespace name="System.Collections" />
+    <Namespace name="System.Collections.Generic" />
+    <Namespace name="System.ComponentModel" />
+    <Namespace name="System.Dynamic" />
+    <Namespace name="System.Windows" />
+    <Namespace name="System.Threading" />
+    <Namespace name="System.Reflection" />
+    <Namespace name="System.Linq" />
+    <Namespace name="System.Linq.Expressions" />
+
+    <CompilerOption name="CompilerVersion" value="v4.0" />
+  </SnippetOptions>
+
+</SnippetOptionsCollection>

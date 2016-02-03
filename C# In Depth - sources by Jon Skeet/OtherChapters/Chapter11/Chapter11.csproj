@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4EAD52D-8DE2-41A4-A253-C14762140EB5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chapter11</RootNamespace>
+    <AssemblyName>Chapter11</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Chapter11.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MiscUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogFile\EntryType.cs" />
+    <Compile Include="LogFile\LogEntry.cs" />
+    <Compile Include="LogFile\LogFileGenerator.cs" />
+    <Compile Include="LogFile\LogReader.cs" />
+    <Compile Include="Model\Defect.cs" />
+    <Compile Include="Model\NotificationSubscription.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\SampleData.cs" />
+    <Compile Include="Model\Severity.cs" />
+    <Compile Include="Model\StaticCounter.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\AllDefectsToSubscribers.cs" />
+    <Compile Include="Queries\AllDefectsToSubscribersGrouped.cs" />
+    <Compile Include="Queries\CartesianJoin.cs" />
+    <Compile Include="Queries\CastAndOfType.cs" />
+    <Compile Include="Queries\DisplayListingsMap.cs" />
+    <Compile Include="Queries\ShowAllUserNames.cs" />
+    <Compile Include="Queries\DateTimeRange.cs" />
+    <Compile Include="Queries\DefectsOpenedByDate.cs" />
+    <Compile Include="Queries\ExplicitRangeVariable.cs" />
+    <Compile Include="Queries\GroupDefectsByAssignee.cs" />
+    <Compile Include="Queries\GroupDefectsByAssigneeWithContinuation.cs" />
+    <Compile Include="Queries\GroupDefectsByAssigneeWithContinuationAndOrdering.cs" />
+    <Compile Include="Queries\GroupDefectsByAssigneeWithProjection.cs" />
+    <Compile Include="Queries\OpenDefectsByProjectAndSeverity.cs" />
+    <Compile Include="Queries\OrderUsersByDefectCount.cs" />
+    <Compile Include="Queries\OrderUsersByLengthOfNameWithLet.cs" />
+    <Compile Include="Queries\OrderUsersByLengthOfNameWithoutLet.cs" />
+    <Compile Include="Queries\PseudoCartesianJoin.cs" />
+    <Compile Include="Queries\RangeCartesianJoin.cs" />
+    <Compile Include="Queries\RemainingDefectsByDate.cs" />
+    <Compile Include="Queries\ShowAllClosedDefects.cs" />
+    <Compile Include="Queries\ShowAllDefects.cs" />
+    <Compile Include="Queries\ShowAllOpenDefectsAssignedToTim.cs" />
+    <Compile Include="Queries\ShowAllOpenDefectsAssignedToTimBySeverity.cs" />
+    <Compile Include="Queries\ShowAllOpenDefectsAssignedToTimBySeverityAndLastModified.cs" />
+    <Compile Include="Queries\ShowAllUsers.cs" />
+    <Compile Include="Queries\ShowAllUsersMethodCall.cs" />
+    <Compile Include="Queries\TranslationExample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\Model.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Chapter11.Model.Defect">
+    <Position X="4.25" Y="2.5" Width="2" />
+    <Members>
+      <Method Name="Defect" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="CreatedBy" Type="Chapter11.Model.User" FixedFromPoint="true">
+      <Path>
+        <Point X="5.562" Y="4.18" />
+        <Point X="5.562" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.973" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AssignedTo" Type="Chapter11.Model.User" FixedToPoint="true">
+      <Path>
+        <Point X="4.875" Y="4.18" />
+        <Point X="4.875" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Project" Type="Chapter11.Model.Project" FixedFromPoint="true">
+      <Path>
+        <Point X="5.188" Y="2.5" />
+        <Point X="5.188" Y="1.603" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.805" Y="0.12" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAEAAAAgAAEAAAACAACAAAAAAQAAAABAAQAAAE=</HashCode>
+      <FileName>Model\Defect.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="Severity" />
+      <Property Name="CreatedBy" />
+      <Property Name="AssignedTo" />
+      <Property Name="Project" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Chapter11.Model.Project">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chapter11.Model.NotificationSubscription">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Model\NotificationSubscription.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Project" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Chapter11.Model.User">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+      <Method Name="User" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Chapter11.Model.Status">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAADAAAA=</HashCode>
+      <FileName>Model\Status.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Chapter11.Model.Severity">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAACA=</HashCode>
+      <FileName>Model\Severity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Chapter11.Model.UserType">
+    <Position X="7.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAQAAAAIAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\UserType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

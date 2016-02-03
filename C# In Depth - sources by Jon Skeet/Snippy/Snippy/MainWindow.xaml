@@ -1,0 +1,59 @@
+﻿<Window x:Class="Snippy.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:snippy="clr-namespace:Snippy;assembly=Snippy"
+    Title="Snippy" Height="600" Width="800">
+    <Window.InputBindings>
+        <KeyBinding Command="snippy:Commands.CompileAndRun" Key="F5"/>
+        <KeyBinding Command="snippy:Commands.Export" Key="E" Modifiers="Control" />
+        <KeyBinding Command="ApplicationCommands.SaveAs" Key="F12" />
+        <KeyBinding Command="snippy:Commands.Import" Key="I" Modifiers="Control" />
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="New" />
+        <CommandBinding Command="ApplicationCommands.Save" Executed="Save" />
+        <CommandBinding Command="ApplicationCommands.SaveAs" Executed="SaveAs" />
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Open" />
+        <CommandBinding Command="snippy:Commands.CompileAndRun" Executed="CompileAndRun" />
+        <CommandBinding Command="snippy:Commands.Export" Executed="Export" />
+        <CommandBinding Command="snippy:Commands.Import" Executed="Import" />
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu BorderThickness="1" DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Command="New" />
+                <MenuItem Header="Open" Command="Open" />
+                <MenuItem Header="Save" Command="Save" />
+                <MenuItem Header="Save As" Command="SaveAs" InputGestureText="F12" />
+                <MenuItem Header="Export" Command="snippy:Commands.Export" InputGestureText="Ctrl+E" />
+                <MenuItem Header="Compile and Run" Command="snippy:Commands.CompileAndRun" InputGestureText="F5" />
+                <MenuItem Header="Import" Command="snippy:Commands.Import" InputGestureText="Ctrl+I" />
+            </MenuItem>
+            <MenuItem Header="Options" Name="OptionsMenu" />
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="40*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
+                <ToolBarPanel HorizontalAlignment="Left" VerticalAlignment="Center" DockPanel.Dock="Top">
+                    <Button Margin="5" Command="snippy:Commands.CompileAndRun">Go!</Button>
+                </ToolBarPanel>
+                <GroupBox Header="Code" Margin="8,0,8,8" >
+                    <TextBox FontFamily="Courier New" AcceptsReturn="True" AcceptsTab="True" Name="codeBox" BorderThickness="0" />
+                </GroupBox>
+            </DockPanel>
+
+            <GroupBox Grid.Row="1" Header="Output" Margin="8,8,8,8">
+                <FlowDocumentScrollViewer>
+                    <FlowDocument>
+                        <Paragraph Name="output"  FontFamily="Courier New" />
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
+            </GroupBox>
+            <GridSplitter Background="#FF808080" Grid.Row="1" HorizontalAlignment="Stretch"
+              VerticalAlignment="Top" ResizeDirection="Rows" Height="3" ShowsPreview="True"/>
+        </Grid>
+    </DockPanel>
+</Window>

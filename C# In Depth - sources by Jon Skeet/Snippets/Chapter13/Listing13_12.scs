@@ -1,0 +1,14 @@
+List<Circle> circles = new List<Circle> {
+    new Circle(new Point(0, 0), 15),
+    new Circle(new Point(10, 5), 20),
+};
+List<Square> squares = new List<Square> {
+    new Square(new Point(5, 10), 5),
+    new Square(new Point(-10, 0), 2)
+};
+
+List<IShape> shapesByAdding = new List<IShape>();
+shapesByAdding.AddRange(Shapes.Circles);
+shapesByAdding.AddRange(Shapes.Squares);
+
+List<IShape> shapesByConcat = circles.Concat<IShape>(squares).ToList();

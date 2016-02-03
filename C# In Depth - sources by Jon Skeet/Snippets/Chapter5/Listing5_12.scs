@@ -1,0 +1,17 @@
+static MethodInvoker CreateDelegateInstance()
+{
+    int counter = 5;
+
+    MethodInvoker ret = delegate
+    {
+         Console.WriteLine(counter);
+         counter++;
+    };
+    ret();
+    return ret;
+}
+
+...
+MethodInvoker x = CreateDelegateInstance();
+x();
+x();
